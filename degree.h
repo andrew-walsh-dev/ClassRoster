@@ -1,1 +1,1 @@
-class 
+enum Degree { SECURITY, NETWORK, SOFTWARE };
