@@ -1,0 +1,3 @@
+C:/Users/imand/source/repos/ClassRoster/cmake-build-debug/CMakeFiles/ClassRoster.dir
+C:/Users/imand/source/repos/ClassRoster/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/imand/source/repos/ClassRoster/cmake-build-debug/CMakeFiles/rebuild_cache.dir
