@@ -1,3 +1,7 @@
+#ifndef STUDENT_H
+#define STUDENT_H
+
+
 class Student {
 
 private:
@@ -38,3 +42,5 @@ public:
     void print();
 
 };
+
+#endif
