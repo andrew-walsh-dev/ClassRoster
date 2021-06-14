@@ -1,6 +1,10 @@
 #ifndef STUDENT_H
 #define STUDENT_H
 
+#include "degree.h"
+#include <string>
+
+using namespace std;
 
 class Student {
 
@@ -38,8 +42,11 @@ public:
     void setNumDays(int* numDays);
     void setDegree(Degree degree);
 
-    //print()
+    //printer
     void print();
+
+    //destructor
+    ~Student();
 
 };
 
