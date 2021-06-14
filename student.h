@@ -8,16 +8,33 @@ private:
     string lastName;
     string emailAddress;
     int age;
-    int numDays[5];
+    int numDays[3];
     Degree degree;
 
 public:
 
+    //constructor
+    Student(string studentId, string firstName, string lastName, string emailAddress, int age, int* numDays, Degree degree);
+
     //accessors
-    string Student::getStudentId();
-    string Student::getFirstName();
-    string Student::getLastName();
-    string Student::getEmailAddress();
-    int Student::getAge();
-    int[] Student::getStudentId();
+    string getStudentId();
+    string getFirstName();
+    string getLastName();
+    string getEmailAddress();
+    int getAge();
+    int*  getNumDays();
+    Degree getDegree();
+
+    //mutators
+    void setStudentId(string studentId);
+    void setFirstName(string firstName);
+    void setLastName(string lastName);
+    void setEmailAddress(string emailAddress);
+    void setAge(int age);
+    void setNumDays(int* numDays);
+    void setDegree(Degree degree);
+
+    //print()
+    void print();
+
 };
