@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/imand/source/repos/ClassRoster/degree.h
+
+C:/Users/imand/source/repos/ClassRoster/main.cpp
+string
+-
+map
+-
+roster.h
+C:/Users/imand/source/repos/ClassRoster/roster.h
+iostream
+-
+stdio.h
+-
+degree.h
+C:/Users/imand/source/repos/ClassRoster/degree.h
+
+C:/Users/imand/source/repos/ClassRoster/roster.h
+student.h
+C:/Users/imand/source/repos/ClassRoster/student.h
+
+C:/Users/imand/source/repos/ClassRoster/student.h
+degree.h
+C:/Users/imand/source/repos/ClassRoster/degree.h
+string
+-
+

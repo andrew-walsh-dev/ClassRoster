@@ -4,15 +4,15 @@
 using namespace std;
 
 //constructor
-Student::Student(string studentId, string firstName, string lastName, string emailAddress, int age, int* numDays, Degree degree) {
+Student::Student(string studentId, string firstName, string lastName, string emailAddress, int age, int daysInCourse1, int daysInCourse2, int daysInCourse3, Degree degree) {
     this->studentId = studentId;
     this->firstName = firstName;
     this->lastName = lastName;
-    this->emailAddress;
+    this->emailAddress = emailAddress;
     this->age = age;
-    this->numDays[0] = numDays[0];
-    this->numDays[1] = numDays[1];
-    this->numDays[2] = numDays[2];
+    this->numDays[0] = daysInCourse1;
+    this->numDays[1] = daysInCourse2;
+    this->numDays[2] = daysInCourse3;
     this->degree = degree;
 }
 
@@ -78,14 +78,23 @@ void Student::setDegree(Degree degree) {
 
 //printer
 void Student::print() {
-    cout << "Student ID: " << this->getStudentId();
-    cout << "\nFirst Name: " << this->getFirstName();
-    cout << "\nLast Name: " << this->getLastName();
-    cout << "\nEmail Address: " << this->getEmailAddress();
-    cout << "\nAge: " + this->getAge();
-    int* numDays = this->getNumDays();
-    cout << "\nDays to complete courses: " << numDays[0] << ", " << numDays[1] << ", " << numDays[2];
-    cout << "Degree: " << this->getDegree();
+    cout << getStudentId();
+    cout << "\tFirst Name: " << getFirstName();
+    cout << "\tLast Name: " << getLastName();
+    cout << "\tAge: " << getAge();
+    int* numberDays = getNumDays();
+    cout << "\tDays to complete courses: {" << numberDays[0] << ", " << numberDays[1] << ", " << numberDays[2] << "}";
+    string degree;
+    if (getDegree() == 0) {
+        degree = "SECURITY";
+    }
+    else if (getDegree() == 1) {
+        degree = "NETWORK";
+    }
+    else {
+        degree = "SOFTWARE";
+    }
+    cout << "Degree Program: " << degree << "\n";
 }
 
 //destructor
