@@ -21,6 +21,8 @@ enum Degree parseDegree(string degreeStr) {
 
 //using parsing method 1 from the lectures
 void parseAndAddStudent(string studentData) {
+
+    //parse the data for a student
     int rhs = studentData.find(",");
     string studentId = studentData.substr(0, rhs);
     int lhs = rhs + 1;
@@ -47,10 +49,13 @@ void parseAndAddStudent(string studentData) {
     lhs = rhs + 1;
     rhs = studentData.find(",", lhs);
     Degree degree = parseDegree(studentData.substr(lhs, rhs - lhs));
+
+    //add the new student to the roster
     classRoster.add(studentId, firstName, lastName, emailAddress, age, numDays1, numDays2, numDays3, degree);
 }
 
 int main() {
+
     const string studentData[] =
             {"A1,John,Smith,John1989@gm ail.com,20,30,35,40,SECURITY",
              "A2,Suzan,Erickson,Erickson_1990@gmailcom,19,50,30,40,NETWORK",
@@ -61,7 +66,7 @@ int main() {
     for (int i = 0; i < 5; i++) {
         parseAndAddStudent(studentData[i]);
     }
-    
+
     cout << "Printing all students...\n";
     classRoster.printAll();
 
@@ -70,14 +75,14 @@ int main() {
 
     cout << "Printing the average days in a course for each student...\n";
     string id;
-    for (int i = 0; i < 5; i++) {
+    for (int i = 1; i < 6; i++) {
         id = "A" + to_string(i);
         classRoster.printAverageDaysInCourse(id);
-
     }
-    cout << "Printing all software students...\n";
 
+    cout << "Printing all software students...\n";
     classRoster.printByDegreeProgram(SOFTWARE);
+
     cout << "Trying to remove student with id A3...\n";
     classRoster.remove("A3");
 
@@ -87,7 +92,7 @@ int main() {
     cout << "Trying to remove student with id A3 again...\n";
     classRoster.remove("A3");
 
-    cout << "Deconstructing the roster...";
+    cout << "Deconstructing the roster...\n";
     classRoster.~Roster();
     return 0;
 }

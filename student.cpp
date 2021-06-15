@@ -82,8 +82,9 @@ void Student::print() {
     cout << "\tFirst Name: " << getFirstName();
     cout << "\tLast Name: " << getLastName();
     cout << "\tAge: " << getAge();
+    cout << endl;
     int* numberDays = getNumDays();
-    cout << "\tDays to complete courses: {" << numberDays[0] << ", " << numberDays[1] << ", " << numberDays[2] << "}";
+    cout << "\tDays to complete courses: {" << numberDays[0] << ", " << numberDays[1] << ", " << numberDays[2] << "}\t";
     string degree;
     if (getDegree() == 0) {
         degree = "SECURITY";
@@ -94,7 +95,7 @@ void Student::print() {
     else {
         degree = "SOFTWARE";
     }
-    cout << "Degree Program: " << degree << "\n";
+    cout << "Degree Program: " << degree << endl;
 }
 
 //destructor
